@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7286F57A-814B-4353-A1D5-6A9B733B1284}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Cajero_automatico.My.MyApplication</StartupObject>
+    <RootNamespace>Cajero_automatico</RootNamespace>
+    <AssemblyName>Cajero automatico</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Cajero automatico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Cajero automatico.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\Primer proyecto 2023\bin\Debug\PDF\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADMINISTRAR_USUARIOS.Designer.vb">
+      <DependentUpon>ADMINISTRAR_USUARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ADMINISTRAR_USUARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clases\CLS_CAJERO_USUARIOS.vb" />
+    <Compile Include="clases\CLS_CAJERO_CREDITOS.VB" />
+    <Compile Include="clases\CLS_CAJERO_MOVIMIENTOS.VB" />
+    <Compile Include="CREDITOS.Designer.vb">
+      <DependentUpon>CREDITOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CREDITOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN_CAJERO.Designer.vb">
+      <DependentUpon>LOGIN_CAJERO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN_CAJERO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulo_cajero.vb" />
+    <Compile Include="MOVIMIENTOS.Designer.VB">
+      <DependentUpon>MOVIMIENTOS.VB</DependentUpon>
+    </Compile>
+    <Compile Include="MOVIMIENTOS.VB">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="REGISTRO_CAJERO.Designer.vb">
+      <DependentUpon>REGISTRO_CAJERO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRO_CAJERO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ADMINISTRAR_USUARIOS.resx">
+      <DependentUpon>ADMINISTRAR_USUARIOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CREDITOS.resx">
+      <DependentUpon>CREDITOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN_CAJERO.resx">
+      <DependentUpon>LOGIN_CAJERO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOVIMIENTOS.resx">
+      <DependentUpon>MOVIMIENTOS.VB</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REGISTRO_CAJERO.resx">
+      <DependentUpon>REGISTRO_CAJERO.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icons8-iniciar-la-transferencia-de-dinero-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icons8-iniciar-la-transferencia-de-dinero-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icons8-charity-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\fotos\icons8-usuarios-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\american-express.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negocios-y-finanzas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negocios-y-finanzas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equipo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icons8-registro-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icons8-pagar-80.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
